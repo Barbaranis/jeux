@@ -1,6 +1,6 @@
 
 
-// -------------------- MENU BURGER RESPONSIVE ------------------------
+// -------------------- MENU BURGER ------------------------
 const menuToggle = document.getElementById('menu-toggle');
 const navMenu = document.getElementById('nav-menu');
 // Ouverture du menu
