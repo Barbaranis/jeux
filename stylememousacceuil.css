@@ -1,0 +1,531 @@
+/* Style global */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #ffdde1, #cf6472);
+    margin: 0;
+    padding: 0;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+
+
+
+
+/* Animations */
+
+/* Effet de paillettes animées */
+@keyframes glitter {
+    0% { opacity: 0; transform: scale(0.5) translateY(0px); }
+    50% { opacity: 1; transform: scale(1) translateY(-10px); }
+    100% { opacity: 0; transform: scale(0.5) translateY(0px); }
+}
+
+.glitter {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.glitter span {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: rgba(250, 250, 250, 0.708);
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    animation: glitter 2s infinite ease-in-out;
+}
+
+
+
+
+
+.logo {
+    margin-bottom: 30px;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* Menu burger*/
+
+
+
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    padding: 10px;
+    background-color: #d0606f; /* Couleur de fond du menu */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+.menu-toggle:hover {
+    background-color: #e085a5; /* Couleur au survol */
+}
+
+
+
+
+.menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background-color: #fefdfe; /* Couleur des barres */
+    transition: background-color 0.3s ease;
+   
+}
+
+
+
+
+.menu-toggle.active span {
+    background-color: #fbf9f9; /* Changement de couleur au clic */
+}
+
+
+
+
+/* Navigation qui glisse depuis la droite */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Caché par défaut */
+    width: 250px;
+    height: 100%;
+    background-color: #fdf9fd;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espacement entre les liens */
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 999;
+}
+
+
+
+
+.nav-menu.show {
+    right: 0; /* Fait apparaître le menu */
+}
+
+
+
+
+.nav-menu  a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #b34f77;
+    transition: color 0.3s ease;
+    margin: 20px 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+.nav-menu a:hover {
+    color: #703644;
+}
+
+
+
+
+.nav-menu.active {
+    color: #331e27;
+}
+
+
+
+
+/* Bouton pour fermer le menu */
+.nav-menu .close-btn {
+    font-size: 24px;
+    color: #f940bb;
+    cursor: pointer;
+    align-self:self-start;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+
+
+
+.nav-menu .close-btn:hover {
+    color: #b2a8ae; /* Couleur au survol */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: #681529;
+    font-size: 120%;
+    margin-bottom: 10px;
+    margin-top: 10%;
+}
+
+
+
+
+
+/* Page d'accueil */
+#homePage {
+    margin-top: 100px;
+}
+h1 {
+    font-size: 2.4rem;
+    color: #a74a8b;
+}
+.rules h2 {
+    color: #51374a;
+}
+.rules ul {
+    list-style-type: none;
+    padding: 0;
+}
+.rules li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+/* Bouton de démarrage */
+.start-btn {
+    background-color: #c99cbb;
+    color: white;
+    font-size: 1.0rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.start-btn:hover {
+    background-color: #8b3560;}
+
+
+
+
+
+
+p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+}
+.rules {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    width: 80%;
+    margin-left: 10%;
+}
+.rules ul {
+    list-style-type: none;
+    padding: 0;
+}
+.rules ul li {
+    margin: 10px 0;
+}
+.start-btn {
+    background-color: #de3c92;
+    color: white;
+    padding: 15px 32px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.start-btn:hover {
+    background-color: #4d132d;
+}
+
+
+
+
+/* Informations de jeu : score et timer */
+#game-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+    margin: 10px;
+    font-size: 1.2rem;
+    color: #3b0c17;
+    font-weight: bold;
+}
+
+#best-score {
+    color: #c67590; /* Rose pastel */
+}
+
+#time-remaining {
+    color: #540d39; /* Rouge pour le timer */
+}
+
+/* Grille du jeu Memory */
+.memory-game {
+    display: grid;
+    grid-template-columns: repeat(4, 105px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 15%;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #ffcad4;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.5s ease, background-color 0.5s ease;
+    transform: rotateY(180deg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card.hidden {
+    background-color: #ffe5ec;
+    transform: rotateY(0deg);
+}
+
+.card.matched {
+    background-color: #caffbf;
+    pointer-events: none;
+}
+
+/* Message affiché après victoire ou défaite */
+#message {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #6a0572;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/* Bouton Recommencer */
+#restart-btn {
+    display: none;
+    background-color: #ff80ab; /* Rose pastel */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+/* Effet au survol */
+#restart-btn:hover {
+    background-color: #a62c55; /* Rose plus foncé */
+    transform: scale(1.1);
+}
+
+/* Effet au clic */
+#restart-btn:active {
+    transform: scale(0.98);
+}
+
+/* Responsive pour iPhone 14 (390px de largeur) */
+
+
+
+
+
+
+
+/*Responsive*/
+
+
+
+
+@media (max-width: 390px) {
+    .burger {
+        display: flex;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        background: #f1f1f1;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .nav-links.active {
+        display: flex;
+}}
+
+
+    h1 {
+        font-size: 1.8rem; /* Réduction de la taille du titre */
+    }
+
+    #game-info {
+        flex-direction: column; /* Passage en colonne */
+        align-items: center;
+        font-size: 1rem;
+    }
+
+    #best-score,
+    #time-remaining {
+        margin-bottom: 10px;
+    }
+
+    .memory-game {
+        grid-template-columns: repeat(4, 75px); /* Taille ajustée pour petits écrans */
+        gap: 8px;
+    }
+
+    .card {
+        width: 75px;
+        height: 75px;
+        font-size: 2.2rem;
+    }
+
+    #message {
+        font-size: 1.2rem;
+        padding: 8px 16px;
+    }
+
+    #restart-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+
+
+    /* Footer */
+footer {
+    margin-top: 10%;
+    background-color: #fdf9fd3f; /* Couleur de fond claire */
+    color: #681529; /* Couleur du texte */
+    padding: 30px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo-img {
+    max-width: 100px;
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #681529;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #c67590; /* Couleur au survol */
+}
+
+.footer-contact p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-contact a {
+    font-size: 16px;
+    color: #681529;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+    color: #c67590; /* Couleur au survol */
+}
+
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  
+     h1 {
+        font-size: 1.8rem;
+        margin-bottom: 10%;
+    }
+
+
+    .introduction h2, .game-rules h2, .tips-and-tricks h2, .game-story h2, .credits h2 {
+        font-size: 1.6rem;
+    }
+
+    .introduction p, .game-rules ul li, .tips-and-tricks p, .game-story p, .credits p {
+        font-size: 1rem;
+    }
+
+     ul {
+    font-size: 90%;
+    }
+    .rules {
+        margin-left: 5%;
+    }
+   
+}
+

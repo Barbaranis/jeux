@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memouss</title>
+    <link rel="stylesheet" href="memouss.css">
+</head>
+<body>
+    <div class="glitter"></div>
+    <!-- HEADER -->
+    <header>
+        <div class="logo-container">
+            <img src="logocilfi.webp" alt="Logo cilfi" class="logo">
+        </div>
+        <div class="pepe">
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="nav-menu" id="nav-menu">
+                <span class="close-btn">×</span>
+                <a href="index.html"><strong>Accueil</strong></a>
+                <a href="about.html"><strong>À propos</strong></a>
+                <a href="contact.html"><strong>Contact</strong></a>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- MAIN -->
+    <main>
+        <div id="game-container">
+            <!-- Stats -->
+            <div id="stats">
+                <p id="score">Score : 0</p>
+                <p id="best-score">Meilleur score : 0</p>
+                <p id="time-remaining">Temps restant : 01:20</p>
+                <p id="level-display">Niveau : 1</p>
+            </div>
+
+
+            <!-- Zone de jeu -->
+            <div class="memory-game"></div>
+
+
+            <!-- Messages et boutons -->
+            <p id="message"></p>
+            <button id="start-game-btn">Jouer</button>
+            <button id="restart-btn" style="display:none;">Recommencer</button>
+            <button id="next-level-btn" style="display:none;">Niveau suivant</button>
+        </div>
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logocilfi.webp" alt="Logo cilfi" class="footer-logo-img">
+            </div>
+            <div class="footer-links">
+                <a href="about.html">À propos</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-contact">
+                <p>Adresse : 24 rue de la plateforme, Paris, France</p>
+                <a href="mailto:contact@cilfi.com">Envoyer un e-mail</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Musique de fond -->
+    <audio id="background-music" src="ChansonfondMemory.wav" loop></audio>
+
+
+    <script src="memouss.js"></script>
+</body>
+</html>
