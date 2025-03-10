@@ -242,8 +242,8 @@ canvas {
 /* Empêcher le défilement de l'écran sur mobile */
 html, body {
       /* Empêche le scroll de la page */
-    touch-action: none;  /* Empêche les gestes multitouch indésirables */
-    
+   /* Empêche les gestes multitouch indésirables */
+    -ms-touch-action: none;
     overscroll-behavior: contain;
 }
 
