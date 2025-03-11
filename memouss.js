@@ -26,7 +26,7 @@ let timer;
 
 // ---------------------- SONS ------------------------
 let backgroundMusic = new Audio('ChansonfondMemory.wav');
-backgroundMusic.loop = true;
+backgroundMusic.loop = true; //repeter la musique en boucle
 backgroundMusic.volume = 0.4;
 let isMusicPlaying = false;
 
