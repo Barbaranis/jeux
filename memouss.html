@@ -3,11 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; media-src 'self'; object-src 'none';">
+
+
     <title>Memouss</title>
+
+
+    <!-- Exemple SRI (à utiliser si tu ajoutes des ressources externes) -->
+    <!-- 
+    <link rel="stylesheet"
+          href="https://cdn.example.com/lib.css"
+          integrity="sha384-abc123..." crossorigin="anonymous">
+    -->
+
+
     <link rel="stylesheet" href="memouss.css">
+    <!-- Police Google avec SRI (optionnel, si besoin d'ajouter une police Google) -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+          integrity="sha384-abc123..." crossorigin="anonymous">
 </head>
 <body>
     <div class="glitter"></div>
+
+
     <!-- HEADER -->
     <header>
         <div class="logo-container">
@@ -32,7 +55,6 @@
     <!-- MAIN -->
     <main>
         <div id="game-container">
-            <!-- Stats -->
             <div id="stats">
                 <p id="score">Score : 0</p>
                 <p id="best-score">Meilleur score : 0</p>
@@ -41,11 +63,9 @@
             </div>
 
 
-            <!-- Zone de jeu -->
             <div class="memory-game"></div>
 
 
-            <!-- Messages et boutons -->
             <p id="message"></p>
             <button id="start-game-btn">Jouer</button>
             <button id="restart-btn" style="display:none;">Recommencer</button>
@@ -76,6 +96,14 @@
     <audio id="background-music" src="ChansonfondMemory.wav" loop></audio>
 
 
+    <!-- Script sécurisé -->
     <script src="memouss.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+

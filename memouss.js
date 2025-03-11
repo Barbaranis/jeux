@@ -270,6 +270,18 @@ function gameOver() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // -------------------- SECURITÉ FRONT-END ------------------------
 // 1. Sécurisation des liens vers les jeux (anti hack via console)
 document.querySelectorAll('.game-card').forEach(card => {
