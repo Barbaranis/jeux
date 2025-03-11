@@ -98,3 +98,13 @@ Object.defineProperty(window, 'score', {
 
 
 
+
+
+
+
+let backgroundMusic = new Audio('ChansonfondMemory.wav');
+backgroundMusic.loop = true;
+backgroundMusic.volume = 0.4;
+let isMusicPlaying = false;
+
+playMusic(); // Lancer la musique
