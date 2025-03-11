@@ -262,3 +262,53 @@ function gameOver() {
 
 
 
+
+
+
+
+
+// -------------------- SECURITÉ FRONT-END ------------------------
+// 1. Sécurisation des liens vers les jeux (anti hack via console)
+document.querySelectorAll('.game-card').forEach(card => {
+    card.addEventListener('click', (e) => {
+        const allowedGames = [
+            'memoussregledujeu.html',
+            'bubblepopregledujeu.html',
+            'echecregledujeu.html',
+            'chatregledujeu.html',
+            'quatropop.html'
+        ];
+        const link = card.getAttribute('href');
+        if (!allowedGames.includes(link)) {
+            e.preventDefault(); // Bloque le lien
+            alert('Ce lien n\'est pas autorisé !');
+        }
+    });
+});
+// 2. Vérification des images (protection contre modification via console)
+document.querySelectorAll('.game-card img').forEach(img => {
+    const allowedImages = [
+        'memoussimg.webp',
+        'bubblepop.webp',
+        'echecsimg.webp',
+        'attrapeleschats.webp',
+        'Quatropopimgg.webp'
+    ];
+    if (!allowedImages.includes(img.getAttribute('src'))) {
+        console.warn('Image non autorisée détectée et supprimée : ', img.getAttribute('src'));
+        img.remove(); // Supprime l'image douteuse
+    }
+});
+// 3. Protection contre manipulation via console (exemple pour les variables globales comme score)
+Object.defineProperty(window, 'score', {
+    get() {
+        console.warn('⚠️ Le score ne peut pas être lu ou modifié via la console.');
+        return 0;
+    },
+    set(value) {
+        console.warn('⚠️ Tentative de triche bloquée.');
+    }
+});
+
+
+
