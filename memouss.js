@@ -37,6 +37,16 @@ let failSound = new Audio('sounds/fail.mp3');
 let winSound = new Audio('Victoirememory.wav');
 
 
+
+// ---------------------- GESTION DE LA MUSIQUE ------------------------
+function playMusic() {
+    if (!isMusicPlaying) {
+        backgroundMusic.play();
+        isMusicPlaying = true;
+    }
+}
+
+
 // ---------------------- MENU BURGER ------------------------
 menuToggle.addEventListener('click', () => {
     navMenu.classList.add('show');
@@ -52,13 +62,6 @@ navMenu.addEventListener('click', (event) => {
 });
 
 
-// ---------------------- GESTION DE LA MUSIQUE ------------------------
-function playMusic() {
-    if (!isMusicPlaying) {
-        backgroundMusic.play();
-        isMusicPlaying = true;
-    }
-}
 
 
 // ---------------------- DÉMARRER LE JEU ------------------------
